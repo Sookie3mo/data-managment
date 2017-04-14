@@ -1,0 +1,36 @@
+<root>
+	<purpose>emergency contact</purpose>
+	<persons>
+		<firstName>David</firstName>
+		<lastName>Small</lastName>
+		<age>38</age>
+	</persons>
+	<persons>
+		<firstName>John</firstName>
+		<lastName>Smith</lastName>
+		<age>25</age>
+		<address>
+			<street>21 2nd Street</street>
+			<city>New York</city>
+			<state>NY</state>
+			<postalCode>10021</postalCode>
+		</address>
+		<phoneNumbers>
+			<type>home</type>
+			<number>212 555-1234</number>
+		</phoneNumbers>
+		<phoneNumbers>
+			<type>mobile</type>
+			<number>646 555-4567</number>
+		</phoneNumbers>
+	</persons>
+</root>	
+
+---------------------------------------------------------------------------
+
+Rules:
+1. Automatically create a "root" node as the default root element.
+2. JSON array entries will be separated to individual XML elements with the same node name. 
+	In this case: "phoneNumbers": [{ele1},{ele2}] =>  <phoneNumbers>ele1</phoneNumbers> <phoneNumbers>ele2</phoneNumbers>
+3. JSON property values will be transformed to text nodes.
+4. Children type will be shown with indentation in the front of the line.

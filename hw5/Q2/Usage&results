@@ -1,0 +1,47 @@
+The 
+bin/spark-submit Q2/Yiming_Liu_part-a.py
+bin/spark-submit Q2/Yiming_Liu_part-b.py
+bin/spark-submit Q2/Yiming_Liu_part-c.py
+bin/spark-submit Q2/Yiming_Liu_part-d.py
+bin/spark-submit Q2/Yiming_Liu_part-e.py
+
+
+The outputs are as follows:
+a.
+bill                                                                            
+david
+mark
+mary
+
+b.
+bill                                                                            
+mark
+mary
+
+
+c.
+db2 v9 , us                                                                     
+ideapad s50 , china
+information server , us
+iphone 5 , us
+iphone 5s , us
+iphone 6 , us
+iphone 6 plus , us
+ms office 2010 , us
+ms office 2013 , us
+taobao , china
+thinkpad t450s , china
+thinkpad t460 , china
+thinkpad t460s , china
+windows 10 , us
+
+d.
+jennifer                                                                        
+
+
+e.
+alibaba , 230000.0                                                              
+apple , 559.9075
+ibm , 76500.0
+lenovo , 850.2
+microsoft , 333.333333333

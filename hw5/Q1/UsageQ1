@@ -1,0 +1,20 @@
+
+scp -i Documents/inf551/EC2/Lucy.pem Downloads/LengthCount.java ec2-user@54.69.101.67:~/
+
+ssh -i "documents/inf551/EC2/Lucy.pem" ec2-user@54.69.101.67
+
+编译生成jar
+bin/hadoop com.sun.tools.javac.Main LengthCount.javajar cf lc.jar LengthCount*.class
+
+将Hadoop下的input dir（内有t1.txt t2.txt)放入hdfs的 user/ec2-user中
+ bin/hdfs dfs -put input input
+
+bin/hadoop jar lc.jar WordCount input
+
+bin/hdfs dfs -ls output/part-r-00000
+
+output：
+Big	2
+Medium	8
+Small	18
+Tiny	3

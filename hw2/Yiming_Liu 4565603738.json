@@ -1,0 +1,44 @@
+{
+   "book": {
+      "publisher": "Addison-Wesley",
+      "author": [
+         "Serge Abiteboul",
+         {
+            "first-name": "Rick",
+            "last-name": "Hull"
+         },
+         {
+            "@age": "20",
+            "author-name": "Victor Vianu"
+         }
+      ],
+      "title": "Foundations of Databases",
+      "year": "1995",
+      "price": "38.8"
+   },
+   "cd": {
+         "@price": "55",
+         "publisher": "Freeman",
+         "author": {
+         "@age": "30",
+         "author-name": "Mary Lee"
+      },
+      "title": "A wonderful world!",
+      "year": "1998"
+   }
+}
+
+-------------------------------------------------------------------
+
+Rules:
+
+1. Root nodes are discarded. In this case : <items> is the root element,  <items> (child elements) </items> => { }
+2. Element nodes with text node children will be converted to JSON key/value pairs. => {"Element":"text node"}
+3. Element nodes with element children => {"Element":{"Element":"text node"} }
+4. Element nodes with two or more children elements which shared the same node name will be gathered into a JSON array.
+5. Children elements in the same level will be separated by ",".
+6. XML attributes will be a JSON properties with "@" marked before. In this case: <author age="20"> =>  "@age": "20"
+7. Terminal text types will be transformed intp a JSON property and marked with the key name, in this case "author".
+
+
+
